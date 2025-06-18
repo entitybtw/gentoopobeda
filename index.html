@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>ГЕНТУПОБЕДА.РФ</title>
+<style>
+  body {
+    background: #DFDFF9;
+    color: #524C76;
+    font-family: monospace, monospace;
+    text-align: center;
+    padding: 40px;
+    user-select: none;
+  }
+  #yearLine {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  #explanation {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+  }
+  #extraText {
+    font-size: 1em;          /* уменьшенный размер шрифта */
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    text-align: left;        /* выравнивание текста по левому краю */
+    max-width: 600px;        /* ограничение ширины для удобочитаемости */
+    line-height: 1.4em;      /* чуть плотнее строки */
+  }
+  #timerLine {
+    font-size: 2em;
+    font-family: monospace;
+  }
+</style>
+</head>
+<body>
+
+<div id="yearLine"></div>
+<div id="explanation"></div>
+
+<div id="extraText">
+  1. Генту победа<br>
+  2. Самый лучший пакетник на земле<br>
+  3. Очередная генту победа<br>
+  4. Слава Богу GENTOO🙏❤️СЛАВА GENTOO 🙏❤️АНГЕЛА ХРАНИТЕЛЯ GENTOO КАЖДОМУ ИЗ ВАС🙏❤️БОЖЕ ХРАНИ GENTOO🙏❤️СПАСИБО ВАМ НАШИ ГЕНТУШНИКИ ✊💯СПАСИБО НАШ СЛАВА GENTOO 🙏❤️СЛАВА GENTOO 🙏❤️АНГЕЛА ХРАНИТЕЛЯ
+</div>
+
+<div id="timerLine"></div>
+
+<script>
+  function updateYearLine() {
+    const currentYear = new Date().getFullYear();
+    document.getElementById('yearLine').textContent = `${currentYear} ЭТО ОЧЕРЕДНОЙ ГОД ГЕНТУ ПОБЕДЫ`;
+    
+    document.getElementById('explanation').textContent = 
+      `Почему ${currentYear} это очередной год генту победы?`;
+  }
+
+  const startDate = new Date('2002-03-31T00:00:00Z').getTime();
+  const msInYear = 1000 * 60 * 60 * 24 * 365.25;
+
+  function updateTimerLine() {
+    const now = Date.now();
+    const diffMs = now - startDate;
+    const years = diffMs / msInYear;
+    document.getElementById('timerLine').textContent = `ГЕНТУ ПОБЕДА УЖЕ ${years.toFixed(14)} лет`;
+  }
+  
+  updateYearLine();
+  updateTimerLine();
+  setInterval(updateTimerLine, 10);
+</script>
+
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gentoo_Linux_logo_matte.svg" width="200" height="200" </img>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gentoo_Linux_logo_matte.svg" width="200" height="200" </img>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Gentoo_Linux_logo_matte.svg" width="200" height="200" </img>
+  <p>
+  этот крутой сайт сделан
+  <a href="https://entitybtw.ru">entitybtw</a>
+  </p>
+  <a href="https://github.com/entitybtw/gentoopobeda">исходный код</a>
+  
+</body>
+</html>
